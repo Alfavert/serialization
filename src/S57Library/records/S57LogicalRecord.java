@@ -1,10 +1,11 @@
 package S57Library.records;
 
 import java.io.IOException;
+import java.io.Serializable;
 
 import S57Library.files.S57ByteBuffer;
 
-public abstract class S57LogicalRecord {
+public abstract class S57LogicalRecord implements Serializable {
 	public static final int HEADER_RECORD_SIZE = 24;
 	protected byte[] header = new byte[HEADER_RECORD_SIZE];
 

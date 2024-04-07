@@ -5,7 +5,9 @@ import S57Library.fiedsRecords.SubFieldDefinitionTable;
 import S57Library.files.S57ByteBuffer;
 import S57Library.records.S57LogicalRecord;
 
-public class S57DDRDataDescriptiveField extends S57DDRField {
+import java.io.Serializable;
+
+public class S57DDRDataDescriptiveField extends S57DDRField implements Serializable  {
 	private String fieldName;
 	private SubFieldDefinitionTable subFieldDefinitions;
 	public String[] formats;

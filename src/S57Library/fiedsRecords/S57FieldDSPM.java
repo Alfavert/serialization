@@ -7,12 +7,14 @@ import S57Library.basics.E_S57RecordType;
 import S57Library.basics.S57FieldAnnotation;
 import S57Library.fiedsRecords.descriptive.S57DDRDataDescriptiveField;
 
+import java.io.Serializable;
+
 
 /**
  * @author cyrille
  *
  */
-public class S57FieldDSPM extends S57IdentityField {
+public class S57FieldDSPM extends S57IdentityField implements Serializable {
 	@S57FieldAnnotation(name="HDAT")
 	public int horizontalDatum;
 	@S57FieldAnnotation(name="VDAT")

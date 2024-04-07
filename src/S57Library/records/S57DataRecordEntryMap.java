@@ -5,6 +5,8 @@ package S57Library.records;
 
 import S57Library.files.S57ByteBuffer;
 
+import java.io.Serializable;
+
 /**
  * the structure of the Entry map as define by IHO
  * 20 Size of field length field 1 Variable 1-9 (defined by encoder)
@@ -12,7 +14,7 @@ import S57Library.files.S57ByteBuffer;
  * 22 Reserved 1 "0"
  * 23 Size of field tag field 1 "4"
  */
-public class S57DataRecordEntryMap {
+public class S57DataRecordEntryMap implements Serializable {
 	int fieldLengthSize;
 	int fieldPosSize;
 	int fieldTagSize;

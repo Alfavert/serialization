@@ -8,8 +8,10 @@ import S57Library.fiedsRecords.S57FieldDSSI;
 import S57Library.objects.S57ObjectsMap;
 import S57Library.objects.S57ObjectsVector;
 
+import java.io.Serializable;
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-public class S57CellModule {
+public class S57CellModule implements Serializable {
     //
     // ////////////////   DSID Data //////////////////////////
     //

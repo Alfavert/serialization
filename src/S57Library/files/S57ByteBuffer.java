@@ -4,10 +4,11 @@
 package S57Library.files;
 
 import java.io.IOException;
+import java.io.Serializable;
 import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
 
-public class S57ByteBuffer {
+public class S57ByteBuffer implements Serializable {
 	private ByteBuffer buffer = null;
 	
 	public S57ByteBuffer(){
