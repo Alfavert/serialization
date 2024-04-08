@@ -14,6 +14,7 @@ import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.nio.ByteBuffer;
+import java.util.Arrays;
 import java.util.Random;
 
 public class S57CellModuleSerialization implements Serializable {
@@ -21,12 +22,10 @@ public class S57CellModuleSerialization implements Serializable {
         try {
             ObjectOutputStream objectOutputStream = new ObjectOutputStream(new FileOutputStream("S57CellModule.txt"));
             S57CellModule cellModule = new S57CellModule();
-            int lg = 100;
+            int lg = 23;
             S57ByteBuffer buffer = new S57ByteBuffer(lg);
-            byte[] array = new byte[20];
-            for (int i = 0; i < array.length; i++) {
-                array[i] = (byte) (i * 10);
-            }
+            byte[] array = new byte[23];
+            Arrays.fill(array, (byte) 2);
 
             S57LogicalRecord record = new S57LogicalRecord(array) {
                 @Override
